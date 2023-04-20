@@ -1,0 +1,28 @@
+﻿@model Libro
+
+@using (Html.BeginForm())
+{
+    <div class="btn-primary visually-hidden">
+        @Html.LabelFor(model=>model.Titolo)
+        <div>
+            @Html.EditorFor(model => model.Titolo)
+        </div>
+    </div>
+
+    <div>
+        @Html.LabelFor(model=>model.Titolo)
+        <div>
+            @Html.DisplayFor(model => model.Titolo)
+        </div>
+    </div>
+
+    <div>
+        @Html.LabelFor(model=>model.Disponiile)
+        <div>
+            @Html.DisplayFor(model => model.Disponiile)
+        </div>
+    </div>
+
+   // <input type="submit" value="Save" />
+    <input type="submit" value="Prendi" formaction="@Url.Action("PrendiLibro")" formmethod="post" />
+}

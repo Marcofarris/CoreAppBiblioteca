@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Libro>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(item => item.Titolo)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titolo)
+            </td>
+            <td>
+                @Html.ActionLink("Detail", "Detail", new {id = item.Id})
+            </td>
+        </tr>
+    }
+
+</table>
